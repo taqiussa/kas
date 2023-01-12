@@ -15,27 +15,5 @@ class InitSeeder extends Seeder
      */
     public function run()
     {
-        $data =
-            [
-                [
-                    'name' => 'Mujaidin',
-                    'username' => 'muja',
-                ],
-                [
-                    'name' => 'M. Khoirul Umam,S.Ag',
-                    'username' => 'umam',
-                ],
-                [
-                    'name' => 'Taqius Shofi Albastomi,S.Kom',
-                    'username' => 'taqi'
-                ]
-            ];
-        foreach ($data as $user) {
-            User::create([
-                'name' => $user['name'],
-                'username' => $user['username'],
-                'password' => bcrypt('12345678')
-            ]);
-        }
     }
 }
