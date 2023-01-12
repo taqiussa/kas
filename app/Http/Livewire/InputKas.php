@@ -18,10 +18,13 @@ class InputKas extends Component
 
     public function render()
     {
-        return view('livewire.input-kas',
-    [
-        'listTransaksi' => Transaksi::with('user')->paginate(5)
-    ]);
+        return view(
+            'livewire.input-kas',
+            [
+                'listTransaksi' => Transaksi::with('user')->paginate(5),
+                'total' => Transaksi::sum('jumlah')
+            ]
+        );
     }
 
     public function mount()

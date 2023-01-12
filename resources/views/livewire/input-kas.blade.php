@@ -61,14 +61,15 @@
                         </td>
                     </tr>
                 @endforeach
-                {{ $listTransaksi->links() }}
                 <tr
                     class="odd:bg-white even:bg-slate-200 border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-slate-300">
-                    <td scope="row" class="py-2 px-6 font-bold text-gray-900 whitespace-nowrap dark:text-white" colspan="2">
+                    <td scope="row" class="py-2 px-6 font-bold text-gray-900 whitespace-nowrap dark:text-white"
+                        colspan="2">
                         TOTAL
                     </td>
-                    <td scope="row" class="py-2 px-6 font-bold text-gray-900 whitespace-nowrap dark:text-white" colspan="4">
-                        {{ rupiah($listTransaksi->sum('jumlah')) }}
+                    <td scope="row" class="py-2 px-6 font-bold text-gray-900 whitespace-nowrap dark:text-white"
+                        colspan="4">
+                        {{ rupiah($total) }}
                     </td>
                 </tr>
             </tbody>
